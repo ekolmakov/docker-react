@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: 
+      # context: reactproject .
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/local/app/node_modules 
+      - .:/usr/local/app
+  tests:
+    build: 
+      # context: reactproject .
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /usr/local/app/node_modules 
+      - .:/usr/local/app
+    command: ["npm", "run", "test"]
+    
+
