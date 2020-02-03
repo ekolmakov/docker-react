@@ -13,7 +13,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  # см. скриншот aws
+  # см. скриншот aws !add AWS keys
   app: "docker"
   env: "docker-env"
   bucket_name: "elasticbeanstalk-us-east-2-701836065776"
